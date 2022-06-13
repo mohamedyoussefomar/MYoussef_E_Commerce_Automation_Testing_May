@@ -1,33 +1,40 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="2" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="13" time="173.192">
-<testcase classname="guest user shall be able to register to the website" name="guest user navigate to site, fill data and press register" time="14.048">
+<testsuite errors="0" failures="3" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="14" time="168.747">
+<testcase classname="guest user shall be able to register to the website" name="guest user navigate to site, fill data and press register" time="13.174">
 <system-out><![CDATA[Given guest user go to registration page....................................passed
 When guest user fill registration data......................................passed
 And guest user click on register button.....................................passed
 Then registration success message should appear.............................passed
 ]]></system-out>
 </testcase>
-<testcase classname="user should be able to login to profile at the website" name="user login with valid data (username, password)" time="19.71">
+<testcase classname="user should be able to login to profile at the website" name="user login with valid data (username, password)" time="19.52">
 <system-out><![CDATA[When user navigates to login page...........................................passed
 And user enters "mohamedyoussefomar@gmail.com" and "MoYo@123"...............passed
 Then user clicks login then login is successful.............................passed
 ]]></system-out>
 </testcase>
-<testcase classname="user must be able to switch between currencies USD and Euro" name="user must be able to switch between currencies" time="10.741">
+<testcase classname="user must be able to switch between currencies USD and Euro" name="user must be able to switch between currencies" time="17.96">
 <system-out><![CDATA[When user clicks on dropdown list and select euro...........................passed
+Then user check that items price was changed to Euro........................passed
 ]]></system-out>
 </testcase>
-<testcase classname="user could hover categories and select sub category" name="user could hover between categories" time="8.764">
+<testcase classname="user could hover categories and select sub category" name="user could hover between categories" time="9.011">
 <system-out><![CDATA[When user hovers to main categories and selects sub category................passed
 ]]></system-out>
 </testcase>
-<testcase classname="users can search for products" name="user can search for products" time="12.991">
+<testcase classname="users can search for products" name="user can search for products" time="10.527">
 <system-out><![CDATA[When user navigates to homepage.............................................passed
 And user clicks on search field in homepage.................................passed
 Then search result appears on screen........................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="user will be able to choose between sliders in homepage" name="first slider is clickable at homepage" time="6.553">
+<testcase classname="users can search for products" name="user can search for product by SKU" time="9.971">
+<system-out><![CDATA[When user navigates to homepage to search SKU...............................passed
+And user clicks on sku search field in homepage.............................passed
+Then sku search result appears on screen....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="user will be able to choose between sliders in homepage" name="first slider is clickable at homepage" time="7.812">
 <failure message="expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [https://demo.nopcommerce.com/]" type="java.lang.AssertionError"><![CDATA[When user clicks on first slider............................................passed
 Then relative product for first slider is displayed.........................failed
 
@@ -39,11 +46,11 @@ java.lang.AssertionError: expected [https://demo.nopcommerce.com/nokia-lumia-102
 	at org.testng.Assert.assertEquals(Assert.java:131)
 	at org.testng.Assert.assertEquals(Assert.java:655)
 	at org.testng.Assert.assertEquals(Assert.java:665)
-	at stepDefinitions.D06_homeSlidersStepDef.product_displayed(D06_homeSlidersStepDef.java:19)
+	at org.example.stepDefinitions.D06_homeSlidersStepDef.product_displayed(D06_homeSlidersStepDef.java:19)
 	at ✽.relative product for first slider is displayed(file:///C:/Users/moham/IdeaProjects/E-Commerce-Automation_May_EGfwd/src/main/resources/features/F06_homeSliders.feature:6)
 ]]></failure>
 </testcase>
-<testcase classname="user will be able to choose between sliders in homepage" name="second slider is clickable at homepage" time="6.89">
+<testcase classname="user will be able to choose between sliders in homepage" name="second slider is clickable at homepage" time="8.012">
 <failure message="expected [https://demo.nopcommerce.com/iphones6] but found [https://demo.nopcommerce.com/]" type="java.lang.AssertionError"><![CDATA[When user clicks on second slider...........................................passed
 Then relative product for second slider is displayed........................failed
 
@@ -55,35 +62,46 @@ java.lang.AssertionError: expected [https://demo.nopcommerce.com/iphones6] but f
 	at org.testng.Assert.assertEquals(Assert.java:131)
 	at org.testng.Assert.assertEquals(Assert.java:655)
 	at org.testng.Assert.assertEquals(Assert.java:665)
-	at stepDefinitions.D06_homeSlidersStepDef.product_second_displayed(D06_homeSlidersStepDef.java:32)
+	at org.example.stepDefinitions.D06_homeSlidersStepDef.product_second_displayed(D06_homeSlidersStepDef.java:32)
 	at ✽.relative product for second slider is displayed(file:///C:/Users/moham/IdeaProjects/E-Commerce-Automation_May_EGfwd/src/main/resources/features/F06_homeSliders.feature:10)
 ]]></failure>
 </testcase>
-<testcase classname="user can press on follow us icons" name="user could open site and press follow us on facebook" time="12.189">
+<testcase classname="user can press on follow us icons" name="user could open site and press follow us on facebook" time="12.062">
 <system-out><![CDATA[When user clicks on facebook icon...........................................passed
 Then facebook is opened in new tab..........................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="user can press on follow us icons" name="user could open site and clicks follow us on twitter" time="31.165">
+<testcase classname="user can press on follow us icons" name="user could open site and clicks follow us on twitter" time="13.487">
 <system-out><![CDATA[When user clicks on twitter icon............................................passed
 Then twitter is opened in new tab...........................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="user can press on follow us icons" name="user could open site and clicks follow us on rss" time="13.101">
-<system-out><![CDATA[When user clicks on rss icon................................................passed
-Then rss is opened in new tab...............................................passed
-]]></system-out>
+<testcase classname="user can press on follow us icons" name="user could open site and clicks follow us on rss" time="12.059">
+<failure message="expected [https://demo.nopcommerce.com/new-online-store-is-open] but found [https://demo.nopcommerce.com/news/rss/1]" type="java.lang.AssertionError"><![CDATA[When user clicks on rss icon................................................passed
+Then provided link is opened in new tab.....................................failed
+
+StackTrace:
+java.lang.AssertionError: expected [https://demo.nopcommerce.com/new-online-store-is-open] but found [https://demo.nopcommerce.com/news/rss/1]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at org.example.stepDefinitions.D07_followUsStepDef.open_rss_new_tab(D07_followUsStepDef.java:99)
+	at ✽.provided link is opened in new tab(file:///C:/Users/moham/IdeaProjects/E-Commerce-Automation_May_EGfwd/src/main/resources/features/F07_followUs.feature:15)
+]]></failure>
 </testcase>
-<testcase classname="user can press on follow us icons" name="user could open site and clicks follow us on youtube" time="14.834">
+<testcase classname="user can press on follow us icons" name="user could open site and clicks follow us on youtube" time="12.811">
 <system-out><![CDATA[When user clicks on youtube icon............................................passed
 Then youtube is opened in new tab...........................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="user can add a product to wishlist" name="success message is visible after adding product to wishlist" time="6.804">
+<testcase classname="user can add a product to wishlist" name="success message is visible after adding product to wishlist" time="7.166">
 <system-out><![CDATA[When user adds a product to wishlist........................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Add product to shopping cart" name="user could open site add product to shopping cart" time="14.699">
+<testcase classname="Add product to shopping cart" name="user could open site add product to shopping cart" time="14.405">
 <system-out><![CDATA[When user navigates to products page........................................passed
 Then user presses on add to shopping cart button............................passed
 ]]></system-out>

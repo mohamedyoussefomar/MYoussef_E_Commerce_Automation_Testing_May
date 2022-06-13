@@ -12,7 +12,7 @@ Feature: user can press on follow us icons
 
   Scenario: user could open site and clicks follow us on rss
     When user clicks on rss icon
-    Then  rss is opened in new tab
+    Then  provided link is opened in new tab
 
   Scenario: user could open site and clicks follow us on youtube
     When user clicks on youtube icon
